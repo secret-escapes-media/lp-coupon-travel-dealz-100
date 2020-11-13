@@ -1,0 +1,27 @@
+---
+layout: page
+banner:
+content: >
+  <div class="container container--no-padding">
+    <div class="width width--xxl text--center">
+      <h1 class="h h--xxxl">{{page.long-title}}</h1>
+      <div class="space--sm"></div>
+      <a href="#entry-form" class="btn btn--lg btn--orange">{{page.enter-cta}}</a>
+    </div>
+  </div>
+
+
+
+---
+
+
+{% include page/price.html %}
+
+  <!-- Offers section -->
+  <div id="offers" class=" ">
+    <div class="space--xxl"></div>
+    <h2 class="h--md h--serif text--bold bv-divider-h2 text--center">Angebote der Woche</h2>
+
+    {% include offer/all-offers-dynamic.html sheet=page.offers.sheet limit=page.offers.limit %}
+
+  </div>

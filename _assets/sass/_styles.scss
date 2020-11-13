@@ -1,0 +1,256 @@
+// general styles for the project that wouldn't be a reuseable component
+
+
+/* ==========================================================================
+   Divider
+   ========================================================================== */
+
+.bv-divider-h1::after {
+    content: ('-----');
+    display: block;
+    //color: $white;
+    letter-spacing: -8px;
+      font-size: $s8;
+      font-weight: normal;
+      //line-height: 1.4;
+      margin: -20px 0 -45px 0px;
+
+  }
+
+
+  .bv-divider-h2::after {
+      content: ('-----');
+      display: block;
+      color: $primary;
+      font-size: $s6;
+      line-height: 0.4!important;
+      letter-spacing: -5px;
+      margin: 15px 0 15px 0px;
+    }
+
+.bv-coorp {
+  border: 4px solid #fff;
+  transform: rotate(0deg);
+  @include bp($md) {
+      border: 8px solid #fff;
+      transform: rotate(-2deg);
+      &--swap {
+      transform: rotate(2deg); }
+     }
+}
+.bv-shadow{
+  box-shadow: 0 0 20px 0 rgba($grey-darkest, .3);
+}
+
+
+
+/* ==========================================================================
+   Badge
+   ========================================================================== */
+.bv-badge {
+  position: absolute;
+  width: 126px;
+  height: 126px;
+  top: 2vh;
+  left: 3vh;
+  padding: 16px 0 5px 0;
+  text-align: center;
+  border-radius: 100px;
+  background-color: $white;
+  transform: rotate(-10deg);
+  z-index: 10;
+  //color: $white;
+  letter-spacing: -1px;
+  line-height: 0.75em;
+  font-size: 1.55rem;
+  //text-shadow: 0 0 10px rgba($bv-darkblue, 0.4);
+   border: 3px double $primary;
+
+  @include bp($lg){
+  width: 128px;
+  height: 128px;
+    top: 0vh;
+    padding: 15px 0px 0;
+    line-height: 0.8em;
+    font-size: 1.6rem;
+    left: 5vh;
+    width: 140px;
+    height: 140px;
+    }
+
+    @include bp($xxl){
+    width: 128px;
+    height: 128px;
+      top: 5vh;
+      padding: 15px 0px 0;
+      line-height: 0.8em;
+      font-size: 1.6rem;
+      left: 10vh;
+      width: 150px;
+      height: 150px;
+      }
+   @include bp($xxxl){
+    width: 128px;
+    height: 128px;
+      top: 5vh;
+      padding: 15px 0px 0;
+      line-height: 0.8em;
+      font-size: 1.6rem;
+      left: 20vh;
+      width: 150px;
+      height: 150px;
+      }
+  }
+    /* ==========================================================================
+       USPs
+       ========================================================================== */
+
+    $mt: 40px;
+    $mr: 25px;
+
+    $ml: -45px;
+    $mb: -35px;
+
+    .bv-usp {
+
+        &--one::before  {
+          content: "";
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image: url( "../img/icons/icons-one.svg" );
+          background-repeat: no-repeat;
+          margin: $mt 0 $mr 0;
+          transform: scale(4);
+          @include bp($md) {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            margin: 0px 0 $mb $ml;
+            transform: scale(3); }
+        }
+        &--two::before  {
+          content: "";
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image: url( "../img/icons/icons-two.svg" );
+          background-repeat: no-repeat;
+          margin: $mt 0 $mr 0;
+          transform: scale(4);
+          @include bp($md) {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            margin: 0px 0 $mb $ml;
+            transform: scale(3); }
+        }
+        &--three::before  {
+          content: "";
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image: url( "../img/icons/icons-three.svg" );
+          background-repeat: no-repeat;
+          margin: $mt 0 $mr 0;
+          transform: scale(4);
+          @include bp($md) {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            margin: 0px 0 $mb $ml;
+            transform: scale(3); }
+        }
+        &--four::before  {
+          content: "";
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image: url( "../img/icons/icons-four.svg" );
+          background-repeat: no-repeat;
+          margin: $mt 0 $mr 0;
+          transform: scale(4);
+          @include bp($md) {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            margin: 0px 0 $mb $ml;
+            transform: scale(3); }
+         }
+         &--five::before  {
+           content: "";
+           display: inline-block;
+           height: 15px;
+           width: 15px;
+           background-image: url( "../img/icons/icons-five.svg" );
+           background-repeat: no-repeat;
+           margin: $mt 0 $mr 0;
+           transform: scale(4);
+           @include bp($md) {
+             content: "";
+             display: inline-block;
+             background-repeat: no-repeat;
+             margin: 0px 0 $mb $ml;
+             transform: scale(3); }
+          }
+          &--six::before  {
+            content: "";
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            background-image: url( "../img/icons/icons-six.svg" );
+            background-repeat: no-repeat;
+            margin: $mt 0 $mr 0;
+            transform: scale(4);
+            @include bp($md) {
+              content: "";
+              display: inline-block;
+              background-repeat: no-repeat;
+              margin: 0px 0 $mb $ml;
+              transform: scale(3); }
+           }
+
+      }
+
+
+      .bv-wrap {
+          padding: 0 10px;
+          text-align: center;
+          @include bp($md){
+            text-align: left;
+            padding: 0 20px 0 60px;
+          }
+        }
+
+      .bv-mob-show{
+          display: block;
+          @include bp($md){
+              display: none;
+          }
+        }
+
+
+    /* ==========================================================================
+       Parallax & Backgrounds
+       ========================================================================== */
+
+    .bv-parallax{
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center 40%;
+
+    }
+
+    @media only screen and (max-width: 1024px) {
+
+    .bv-remove-bg{
+      background-image: none!important;
+    }
+
+    .bv-parallax{
+      background-attachment: scroll;
+      background-size: cover;
+      }
+
+    }

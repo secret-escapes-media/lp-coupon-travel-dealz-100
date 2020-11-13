@@ -1,0 +1,28 @@
+<div class="vpad--xl">
+  <div class="container ">
+  <div class="space--md"></div>
+    <div class="text--justify width width--lg">
+      <div class="h--md h--serif text--bold bv-divider-h2 text--center">{{page.intro-section.title}}</div>
+      <div class="space--sm"></div>
+      <div class="p p--xxl">{{page.intro-section.intro}}</div>
+    </div>
+    <div class="space--xl"></div>
+
+  </div>
+</div>
+
+<div class="harvey bg--grey-lightest">
+  <div class="harvey__img" style="background-image: url('{{site.img}}/pages/overview/usp.jpg');">
+
+  </div>
+  <div class="harvey__text boxpad--lg">
+              <h2 class="h--xs text--bold text--left">Jetzt Guthaben sichern!</h2>
+                <div class="space--md"></div>
+              {% for list in page.intro-section.bullets %}
+              <li class="p p--xxl " >{{list.bullet}}</li>
+
+              {% endfor%}
+              <div class="space--md"></div>
+<a href="#top" class="btn">Hier teilnehmen</a>
+  </div>
+</div>

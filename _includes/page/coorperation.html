@@ -1,0 +1,22 @@
+<div class="vpad--xl bg--grey-lightest">
+  <div class="container vpad--xl">
+    <h2 class="h--lg text--light text--center bv-divider-h2">In Zusammenarbeit mit</h2>
+    <div class="space--lg"></div>
+    {% for section in site.data.coorperation %}
+    <div class="bob  {% cycle '', 'bob--swap' %}">
+      <div class="bob__img2">
+        <a href="{{site.baseurl}}{{destination.url}}"  class="bv-shadow img img--4-3 img--lg-1-1 bv-coorp {% cycle '', 'bv-coorp--swap' %}" style="background-image: url('{{site.img}}/img.jpg'); " ></a>
+      </div>
+      <div class="bob__text2">
+        <a id="track-partner-logo{{include.placement | prepend: '-'}}" class="logo logo--partner{% if include.small %} logo--partner-sm{% endif %}" href="{{site.partner.link}}">
+          <img src="{{site.img}}/logo/{{section.logo}}.svg" alt="{{site.partner.name}} Logo">
+        </a>
+        <div class="space--md"></div>
+        <div class="p p--xxl">{{section.description}}</div>
+        <div class="space--lg"></div>
+
+      </div>
+    </div>
+    {% endfor%}
+  </div>
+</div>

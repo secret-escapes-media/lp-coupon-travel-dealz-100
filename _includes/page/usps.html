@@ -1,0 +1,26 @@
+<div class="vpad--xl bg--white">
+
+    <div class="container container--xxl">
+      <div class="space--xxl"></div>
+      <div class="width width--md text--center">
+        <h2 class="h--lg text--light bv-divider-h2">Lorem ipsum <br>dolor sit amet elit.</h2>
+      </div>
+      <div class="space--md"></div>
+
+      <div class="row row--lg-6-6 row--gutters-sm ">
+        {% for section in site.data.usps %}
+        <div class="col">
+          <div class="bv-wrap bv-usp--{{section.id}}" >
+            <h3 class="h--xxs text--bold" >{{section.title}}</h3>
+            <div class="space--sm"></div>
+            <div class="" >{{section.description}}</div>
+            <div class="space--sm"></div>
+          </div>
+        </div>
+        {% endfor%}
+
+        <div class="space--xxl"></div>
+      </div>
+      <div class="space--xxl"></div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+
+
+<div class="vpad--xl bg--grey-lightest">
+  <div class="container vpad--xl">
+    <div class="text--center width width--lg">
+      <h2 class="h--lg text--light text--center bv-divider-h2">Einfach kostenlos registrieren und am Gewinnspiel teilnehmen!*</h2>
+    </div>
+  </div>
+  <div class="space--xxl bv-mob-show"></div>
+
+
+  <div id="entry-form boxpad--lg">
+    {% assign form = page.competition %}
+    <form class="form boilerform competition-form" action="{{form.post-url}}" method="POST" data-expires="{{form.expiry-date}}" novalidate>
+      {% include form/messages.html %}
+      <div class="form__content width width--xl">
+        <div class="form__input js-form-input">
+          <div class="row row--xl-6-6 row--gutters-sm">
+
+            <div class="col">
+              <label for="{{form.id}}-select" class="label">Anrede </label>
+              <div class="select-field">
+                <select id="{{form.id}}-{{this.id}}" name="{{this.id}}" class="select-field__menu" data-required="true">
+                  <option disabled selected value>Bitte wählen</option>
+                  <option value="Frau">Frau</option>
+                  <option value="Herr">Herr</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+                <span class="select-field__decor" aria-hidden="true" role="presentation"><img src="{{site.img}}/icons/drop-down-arrow.svg" alt="Drop down arrow"></span>
+              </div>
+            </div>
+
+            <div class="col">
+              <label for="{{form.id}}-email" class="label">E-Mail</label>
+              <input type="text" id="{{form.id}}-email" name="email" class="input-field" autocorrect="off" data-required="true">
+            </div>
+
+              <div class="col">
+                <label for="{{form.id}}-firstname" class="label">Vorname</label>
+                <input type="text" id="{{form.id}}-firstname" name="vorname" class="input-field" autocorrect="off" data-required="true">
+              </div>
+
+              <div class="col">
+                <label for="{{form.id}}-lastname" class="label">Nachname</label>
+                <input type="text" id="{{form.id}}-lastname" name="nachname" class="input-field" autocorrect="off" data-required="true">
+              </div>
+
+              <div class="col">
+                <label for="{{form.id}}-street" class="label">Straße, Hausnummer</label>
+                <input type="text" id="{{form.id}}-street" name="street" class="input-field" autocorrect="off" data-required="true">
+              </div>
+
+              <div class="col">
+                <label for="{{form.id}}-city" class="label">PLZ, Ort</label>
+                <input type="text" id="{{form.id}}-city" name="city" class="input-field" autocorrect="off" data-required="true">
+              </div>
+            </div>
+            <div class="space--xl"></div>
+            <div class=" js-checkbox-question" data-question-id="{{form.id}}-ckeckbox">
+              <label for="{{form.id}}-{{option.id}}" class="js-input-button">
+                <div class="">
+                  <div class="">
+                    <input type="hidden" name="optin" value="no">
+                    <input type="checkbox" id="{{form.id}}-optin" name="{{option.id}}" value="yes">
+                  </div>
+                  </div>Ja, ich möchte außerdem eine Einladung zu den Newslettern von Partner1 und Partner2 bekommen, um zukünftig noch schneller über alle aktuellen Aktionen, Angebote und Events informiert zu werden.
+              </label>
+            </div>
+
+            <div class="space--xl"></div>
+            <button type="submit" class="btn" style="width:100%" disabled>Absenden</button>
+            <div class="space--sm"></div>
+            <p class="text--sm text--normal">{{form.terms}}</p>
+            <div class="space--xl"></div>
+          </div>
+        </form>
+      </div>
+    </div>
